@@ -23,7 +23,6 @@ class Main extends Component {
 
   constructor(props) {
     super(props);
-
   }
 
   render() {
@@ -47,14 +46,14 @@ class Main extends Component {
     return (
       <div>
         <Header />
-          <Switch>
-              <Route path='/home' component={HomePage} />
-              <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
-              <Route path='/menu/:dishId' component={DishWithId} />
-              <Route exact path='/contactus' component={Contact} />
-              <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />
-              <Redirect to="/home" />
-          </Switch>
+        <Switch>
+            <Route path='/home' component={HomePage} />
+            <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
+            <Route path='/menu/:dishId' component={DishWithId} />
+            <Route exact path='/contactus' component={Contact} />
+            <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />
+            <Redirect to="/home" />
+        </Switch>
         <Footer />
       </div>
     );
