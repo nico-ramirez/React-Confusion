@@ -1,8 +1,8 @@
 import { LEADERS } from '../shared/leaders';
 
-export const Leaders = (states = LEADERS, action) => {
+export const Leaders = (state = LEADERS, action) => {
     switch(action.type) {
         default:
-            return states;
+            return state;
     }
 }
